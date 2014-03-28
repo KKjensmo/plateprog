@@ -11,18 +11,18 @@ import javax.swing.JTextField;
 public class PlatesamlingFunc {
 
 
-	
+
 	//lager et nytt VinylPlate objekt hver gang den blir kalt
 	//bruker gir input og resultatet lagres som en egen string
-	
-	public static void addPlate(){
 
+	public static void addPlate(){
+		
 		VinylPlate p = new VinylPlate();
 		p.artist = JOptionPane.showInputDialog("Artist name: ");
 		p.tittel = JOptionPane.showInputDialog("Record name: ");
 		p.fullnavn = p.artist.concat(" - " + p.tittel);
 		PlateSamling.samling.add(p);
-
+		System.out.println(p);
 	}
 
 	//lager et StringBuilder objekt
@@ -37,7 +37,7 @@ public class PlatesamlingFunc {
 		JOptionPane.showMessageDialog(null, builder.toString());
 
 	}
-	
+
 	public static void printArtists(){
 		StringBuilder builder = new StringBuilder(PlateSamling.samling.size());
 		for(VinylPlate plate : PlateSamling.samling){

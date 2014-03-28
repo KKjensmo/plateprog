@@ -9,7 +9,7 @@ import javax.swing.*;
 import org.w3c.dom.events.EventTarget;
 
 
-public class PlatesamlingGui extends JFrame {
+public class PlatesamlingGui extends JPanel {
 
 	//declare buttons
 	static JButton addRecord = new JButton("Add a new record");
@@ -18,11 +18,9 @@ public class PlatesamlingGui extends JFrame {
 	static JButton showArtists = new JButton("Show artists");
 
 
-
 	public PlatesamlingGui(){
 
 		//set frame title and layout style
-		setTitle("Platesamling v 1.2");
 		setLayout(new FlowLayout());
 
 		//add buttons
