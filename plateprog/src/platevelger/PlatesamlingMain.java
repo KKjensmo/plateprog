@@ -5,6 +5,7 @@ import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 
+
 public class PlatesamlingMain {
 
 	public static void main(String[] args) {

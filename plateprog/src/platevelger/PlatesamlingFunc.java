@@ -1,5 +1,6 @@
 package platevelger;
 
+import java.awt.image.SampleModel;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -19,8 +20,8 @@ public class PlatesamlingFunc {
 		
 		VinylPlate p = new VinylPlate();
 		p.artist = JOptionPane.showInputDialog("Artist name: ");
-		p.tittel = JOptionPane.showInputDialog("Record name: ");
-		p.fullnavn = p.artist.concat(" - " + p.tittel);
+		p.title = JOptionPane.showInputDialog("Record name: ");
+		//p.fullnavn = p.artist.concat(" - " + p.title);
 		PlateSamling.samling.add(p);
 		System.out.println(p);
 	}
@@ -29,12 +30,18 @@ public class PlatesamlingFunc {
 	//for hver plate i platesamlingen lager den en string i JoPtionpane med plate.fullnavn og et linjeskift
 	public static void printPlateSamling(){
 
+		for(int i = 0; i < PlateSamling.samling.size(); i++){
+			JOptionPane.showMessageDialog(null, PlateSamling.samling.get(i));
+		}
+		
+		/*
 		StringBuilder builder = new StringBuilder(PlateSamling.samling.size());
 		for(VinylPlate plate : PlateSamling.samling){
 			builder.append(  plate.fullnavn + "\n");
 		}
 		//this works :D
 		JOptionPane.showMessageDialog(null, builder.toString());
+		*/
 
 	}
 
@@ -51,7 +58,7 @@ public class PlatesamlingFunc {
 
 		int r = (int) (Math.random()*PlateSamling.samling.size());
 		VinylPlate chosen = PlateSamling.samling.get(r);
-		JOptionPane.showMessageDialog(null, chosen.fullnavn);
+		JOptionPane.showMessageDialog(null, chosen.artist + " - " + chosen.title);
 
 	}
 
