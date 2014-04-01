@@ -31,6 +31,32 @@ public class VinylPlate {
 		return this.title;
 	}
 	
+	public String getLabel(){
+		return this.label;
+	}
+	
+	public int getReleaseyr(){
+		return this.releaseyr;
+	}
+	
+	//setters
+	
+	public void setArtist(String artist){
+		this.artist = artist;
+	}
+	
+	public void setTitle(String title){
+		this.title = title;
+	}
+
+	public void setLabel(String label){
+		this.label = label;
+	}
+	
+	public void setReleaseYr(int year){
+		this.releaseyr = year;
+	}
+	
 	//toString
 	public String toString() {
 		return artist + " - " + title;
