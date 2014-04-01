@@ -21,6 +21,8 @@ public class PlatesamlingFunc {
 		VinylPlate p = new VinylPlate();
 		p.artist = JOptionPane.showInputDialog("Artist name: ");
 		p.title = JOptionPane.showInputDialog("Record name: ");
+		p.label = JOptionPane.showInputDialog("Record Label: ");
+		p.releaseyr = JOptionPane.showInputDialog("Release year: ");
 		//p.fullnavn = p.artist.concat(" - " + p.title);
 		PlateSamling.samling.add(p);
 		System.out.println(p);
@@ -30,19 +32,18 @@ public class PlatesamlingFunc {
 	//for hver plate i platesamlingen lager den en string i JoPtionpane med plate.fullnavn og et linjeskift
 	public static void printPlateSamling(){
 
-		for(int i = 0; i < PlateSamling.samling.size(); i++){
+		/*for(int i = 0; i < PlateSamling.samling.size(); i++){
 			JOptionPane.showMessageDialog(null, PlateSamling.samling.get(i));
-		}
+		}*/
 		
-		/*
+		
 		StringBuilder builder = new StringBuilder(PlateSamling.samling.size());
 		for(VinylPlate plate : PlateSamling.samling){
-			builder.append(  plate.fullnavn + "\n");
+			builder.append(  plate.artist + " - " + plate.title + "\n");
 		}
 		//this works :D
 		JOptionPane.showMessageDialog(null, builder.toString());
-		*/
-
+		
 	}
 
 	public static void printArtists(){

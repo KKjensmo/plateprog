@@ -2,9 +2,6 @@ package platevelger;
 
 public class VinylPlate {
 
-
-	
-
 	//VARIABLES
 	
 	//releaseyr som string? hvordan få jtextfield til å vise int
