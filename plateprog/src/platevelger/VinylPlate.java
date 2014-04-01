@@ -3,17 +3,20 @@ package platevelger;
 public class VinylPlate {
 
 
+	
 
 	//VARIABLES
+	
+	//releaseyr som string? hvordan få jtextfield til å vise int
 	public String artist;
 	public String title;
 	//public String fullnavn;
 	public String label;
-	public int releaseyr;
+	public String releaseyr;
 
-	
+
 	//CONSTRUCTORS
-	
+
 	public VinylPlate() {
 	}
 
@@ -22,29 +25,42 @@ public class VinylPlate {
 		this.title = tittel;
 	}
 
+	public VinylPlate(String artist, String title, String label){
+		this.artist = artist;
+		this.title = title;
+		this.label = label;
+	}
+
+	public VinylPlate(String artist, String title, String label, String release){
+		this.artist = artist;
+		this.title = title;
+		this.label = label;
+		this.releaseyr = release;
+	}
+
 	//getters
-	
+
 	public String getArtist(){
-	return this.artist;	
+		return this.artist;	
 	}
 	public String getTitle(){
 		return this.title;
 	}
-	
+
 	public String getLabel(){
 		return this.label;
 	}
-	
-	public int getReleaseyr(){
+
+	public String getReleaseyr(){
 		return this.releaseyr;
 	}
-	
+
 	//setters
-	
+
 	public void setArtist(String artist){
 		this.artist = artist;
 	}
-	
+
 	public void setTitle(String title){
 		this.title = title;
 	}
@@ -52,14 +68,15 @@ public class VinylPlate {
 	public void setLabel(String label){
 		this.label = label;
 	}
-	
-	public void setReleaseYr(int year){
+
+	public void setReleaseYr(String year){
 		this.releaseyr = year;
 	}
-	
+
 	//toString
+	
 	public String toString() {
 		return artist + " - " + title;
 	}
-	
+
 }

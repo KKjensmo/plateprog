@@ -10,10 +10,16 @@ import javax.swing.*;
 public class ListView extends JPanel {
 
 	public static void main(String[] args) {
-		VinylPlate vp = new VinylPlate("Jimi Hendrix", "Valleys of Neptune");
+		//adds test records
+		VinylPlate vp = new VinylPlate("Jimi Hendrix", "Valleys of Neptune", "Legacy", "2010");
+		VinylPlate vp2 = new VinylPlate("The Black Keys", "Rubber Factory", "Fat Possum", "2004");
+		VinylPlate vp3 = new VinylPlate("Flight of the Conchords", "Flight of the Conchords", "Sub Pop", "2008");
 		PlateSamling.samling.add(vp);
+		PlateSamling.samling.add(vp2);
+		PlateSamling.samling.add(vp3);
+		
 		JFrame psGui = new JFrame();
-		psGui.setTitle("Test Panel");
+		psGui.setTitle("Record Collection List");
 
 		//adder list view til gui
 		ListView listviewGui = new ListView();
@@ -50,10 +56,13 @@ public class ListView extends JPanel {
 		//mouseClicked trigges på press og release combo
 		@Override
 		public void mouseClicked(MouseEvent e) {
+			//creates an index where the mouse is clicked, selects that index indicating tht albums
 			int index = collectionList.locationToIndex(e.getPoint());
 			VinylPlate selectedPlate = PlateSamling.samling.get(index);
 			artistText.setText(selectedPlate.artist);
 			albumText.setText(selectedPlate.title);
+			recordLabelText.setText(selectedPlate.label);
+			releaseYearText.setText(selectedPlate.releaseyr);
 
 		}
 	};
@@ -65,9 +74,9 @@ public class ListView extends JPanel {
 	JLabel releaseYearLabel = new JLabel("Release: ");
 
 	//JTEXTFIELDS
-	JTextField artistText = new JTextField(40);
-	JTextField albumText = new JTextField(40);
-	JTextField recordLabelText = new JTextField(40);
+	JTextField artistText = new JTextField(25);
+	JTextField albumText = new JTextField(25);
+	JTextField recordLabelText = new JTextField(25);
 	JTextField releaseYearText = new JTextField(4);
 
 	//method to add all records to the collection
