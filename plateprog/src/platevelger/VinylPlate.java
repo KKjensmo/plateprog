@@ -7,7 +7,6 @@ public class VinylPlate {
 	//releaseyr som string? hvordan få jtextfield til å vise int
 	public String artist;
 	public String title;
-	//public String fullnavn;
 	public String label;
 	public String releaseyr;
 

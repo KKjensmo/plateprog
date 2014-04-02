@@ -98,7 +98,7 @@ public class ListView extends JPanel {
 		 */
 		setLayout(new GridBagLayout());
 		GridBagConstraints gbc = new GridBagConstraints();
-		//gridbaggin, setter startpunkt
+		//gridbaggin, setter startpunkt i (1,0)
 		gbc.gridx = 1;
 		gbc.gridy = 0;
 		//adder artistlabel osv på gridbagconstraints (derfor adder man x, gbc)

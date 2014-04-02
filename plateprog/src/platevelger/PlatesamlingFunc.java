@@ -23,7 +23,6 @@ public class PlatesamlingFunc {
 		p.title = JOptionPane.showInputDialog("Record name: ");
 		p.label = JOptionPane.showInputDialog("Record Label: ");
 		p.releaseyr = JOptionPane.showInputDialog("Release year: ");
-		//p.fullnavn = p.artist.concat(" - " + p.title);
 		PlateSamling.samling.add(p);
 		System.out.println(p);
 	}
