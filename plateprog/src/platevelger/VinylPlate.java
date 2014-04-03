@@ -4,11 +4,12 @@ public class VinylPlate {
 
 	//VARIABLES
 	
-	//releaseyr som string? hvordan få jtextfield til å vise int
+	//releaseyr som string? hvordan få jtextfield til å vise int - simple hack workaround : "" + tall
 	public String artist;
 	public String title;
 	public String label;
 	public String releaseyr;
+	
 
 
 	//CONSTRUCTORS
